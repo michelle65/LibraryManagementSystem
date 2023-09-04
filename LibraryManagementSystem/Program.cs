@@ -15,7 +15,6 @@ namespace LibraryManagementSystem
             var bookService = new BookService(bookRepository);
             var borrowedBookService = new BorrowedBookService(borrowBookRepository, bookRepository);
 
-            // Use a data seeder to populate initial data
             SeedData.SeedDb(bookRepository, borrowBookRepository);
             while (true)
             {
