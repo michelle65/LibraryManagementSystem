@@ -36,7 +36,7 @@ namespace LibraryManagementSystem.UnitTests
             var bookService = new BookService(bookRepository);
             var borrowedBookService = new BorrowedBookService(borrowedBookRepository, bookRepository);
 
-            var book = new Book { Id = 6, Price = 105, Nume = "BookFive", ISBN = "isbn" };
+            var book = new Book { Id = 6, Price = 105, Name = "BookFive", ISBN = "isbn" };
 
             var actualBook = bookRepository.CreateNewBook(book);
             var borrowedBook = new BorrowedBook { Id = 6, BookId = actualBook.Id, BorrowDate = DateTime.Now.AddDays(-21), ReturnDate = DateTime.Now, DueDate = DateTime.Now.AddDays(-7), IsReturned = false };

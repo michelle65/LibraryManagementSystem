@@ -28,7 +28,7 @@ namespace LibraryManagementSystem.Repositories
         {
             Console.Write("Enter the title of the book: ");
             string title = Console.ReadLine();
-            int copiesAvailable = books.Count(b => b.Nume == bookName);
+            int copiesAvailable = books.Count(b => b.Name == bookName);
             Console.WriteLine($"Copies available for {title}: {copiesAvailable}");
             return copiesAvailable;
         }
@@ -38,7 +38,7 @@ namespace LibraryManagementSystem.Repositories
             var existingBook = GetById(book.Id);
             if (existingBook != null)
             {
-                existingBook.Nume = book.Nume;
+                existingBook.Name = book.Name;
                 existingBook.ISBN = book.ISBN;
                 existingBook.Price = book.Price;
             }

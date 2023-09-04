@@ -10,7 +10,7 @@ namespace LibraryManagementSystem
             Models.Book firstBook = bookRepository.CreateNewBook(new Models.Book
             {
                 ISBN = "87-23-90157-8",
-                Nume = "BookOne",
+                Name = "BookOne",
                 Price = 150,
             });
 
@@ -25,7 +25,7 @@ namespace LibraryManagementSystem
             var secondBook = bookRepository.CreateNewBook(new Models.Book
             {
                 ISBN = "87-23-90157-8",
-                Nume = "BookOne",
+                Name = "BookOne",
                 Price = 150
             });
 
@@ -33,7 +33,7 @@ namespace LibraryManagementSystem
             {
                 Id = 3,
                 ISBN = "87-23-90157-8",
-                Nume = "BookOne",
+                Name = "BookOne",
                 Price = 150
             });
 
@@ -41,7 +41,7 @@ namespace LibraryManagementSystem
             {
                 Id = 4,
                 ISBN = "87-23-90157-9",
-                Nume = "BookTwo",
+                Name = "BookTwo",
                 Price = 150
             });
 
@@ -49,7 +49,7 @@ namespace LibraryManagementSystem
             {
                 Id = 5,
                 ISBN = "87-23-90157-10",
-                Nume = "BookThree",
+                Name = "BookThree",
                 Price = 150
             });
 

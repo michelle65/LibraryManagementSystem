@@ -37,16 +37,16 @@ namespace LibraryManagementSystem.UnitTests
         public void When_Adding_Ok_Book_Should_Return_Ok()
         {
             // Arrange
-            var book = new Book { Id = 1, Nume = "Sample Book", ISBN = "1221-123132-22" };
+            var book = new Book { Id = 1, Name = "Sample Book", ISBN = "1221-123132-22" };
 
             // Act
             var actualBook = bookRepository.CreateNewBook(book);
 
             // Assert
-            var expectedBook = new Book { Id = 1, Nume = "Sample Book", ISBN = "1221-123132-22" };
+            var expectedBook = new Book { Id = 1, Name = "Sample Book", ISBN = "1221-123132-22" };
 
             Assert.IsNotNull(actualBook);
-            Assert.AreEqual(expectedBook.Nume, actualBook.Nume);
+            Assert.AreEqual(expectedBook.Name, actualBook.Name);
             Assert.AreEqual(expectedBook.ISBN, actualBook.ISBN);
         }
         [TestMethod]

@@ -78,7 +78,7 @@ namespace LibraryManagementSystem.Services
             }
             else
             {
-                Console.WriteLine($"Book {bookId} - {book.Nume} : Returned on time.");
+                Console.WriteLine($"Book {bookId} - {book.Name} : Returned on time.");
             }
 
             _borrowedBookRepository.ReturnBook(bookId);

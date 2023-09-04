@@ -110,20 +110,20 @@ namespace LibraryManagementSystem
             foreach (var bookGroup in bookGroups)
             {
                 var firstBook = bookGroup.First();
-                Console.WriteLine($"Book id:{firstBook.Id}, Title:{firstBook.Nume}, ISBN:{firstBook.ISBN}, Price:{firstBook.Price}, Copies:{bookGroup.Count()}");
+                Console.WriteLine($"Book id:{firstBook.Id}, Title:{firstBook.Name}, ISBN:{firstBook.ISBN}, Price:{firstBook.Price}, Copies:{bookGroup.Count()}");
             }
         }
         private static void GetBooksAvailableBooks(BookService bookService, BorrowedBookService borrowedBookService, string bookName)
         {
             var bookCollection = bookService.GetAllBooks();
             var borrowedBooks = borrowedBookService.GetBorrowedBooks();
-            var matchingBooks = bookCollection.FirstOrDefault(book => book.Nume == bookName);
+            var matchingBooks = bookCollection.FirstOrDefault(book => book.Name == bookName);
 
             if (matchingBooks != null)
             {
 
                 int bookId = matchingBooks.Id;
-                int allBooks = bookCollection.Count(borrowedBook => borrowedBook.Nume == bookName);
+                int allBooks = bookCollection.Count(borrowedBook => borrowedBook.Name == bookName);
                 int borrowedCount = borrowedBooks.Count(borrowedBook => borrowedBook.BookId == bookId && borrowedBook.IsReturned == false);
 
                 int availableCount = allBooks - borrowedCount;

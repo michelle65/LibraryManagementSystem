@@ -28,7 +28,7 @@ namespace LibraryManagementSystem.Services
         {
             int lastId = _bookRepository.GetAllBooks().Max(b => b.Id);
 
-            _bookRepository.CreateNewBook(new Book { Id = lastId++, Nume = name, ISBN = isbn, Price = price });
+            _bookRepository.CreateNewBook(new Book { Id = lastId++, Name = name, ISBN = isbn, Price = price });
 
         }
 
